@@ -36,14 +36,23 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3Bj-M1-ANr">
                                 <rect key="frame" x="181" y="173.5" width="37" height="37"/>
                             </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j2z-4r-p58">
+                                <rect key="frame" x="10" y="265.5" width="394" height="394"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="j2z-4r-p58" secondAttribute="height" id="xCO-Rd-Gz0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xM7-gG-Xus" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="3zk-mm-pdS"/>
+                            <constraint firstItem="j2z-4r-p58" firstAttribute="top" secondItem="xM7-gG-Xus" secondAttribute="bottom" constant="20" id="DkV-Qv-itL"/>
                             <constraint firstItem="xM7-gG-Xus" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IB9-Bt-tc5"/>
+                            <constraint firstItem="j2z-4r-p58" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="IMc-wn-iOS"/>
                             <constraint firstItem="xM7-gG-Xus" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.12" id="Yxl-gZ-C95"/>
                             <constraint firstItem="3Bj-M1-ANr" firstAttribute="centerX" secondItem="xM7-gG-Xus" secondAttribute="centerX" constant="-7.5" id="fqB-3h-mHg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j2z-4r-p58" secondAttribute="trailing" constant="10" id="imm-LE-LyC"/>
                             <constraint firstItem="3Bj-M1-ANr" firstAttribute="centerY" secondItem="xM7-gG-Xus" secondAttribute="centerY" id="mYG-14-EOc"/>
                         </constraints>
                     </view>
@@ -58,6 +67,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="3Bj-M1-ANr" id="Iry-vE-R7I"/>
                         <outlet property="cityNameLbl" destination="RCp-0L-XjV" id="90O-Xc-fhi"/>
+                        <outlet property="gifIV" destination="j2z-4r-p58" id="dii-b6-Afl"/>
                         <outlet property="tempLbl" destination="tfg-7z-4YO" id="vgQ-a0-ykU"/>
                         <outlet property="weatherInfoStackView" destination="xM7-gG-Xus" id="YUf-KB-BMw"/>
                     </connections>

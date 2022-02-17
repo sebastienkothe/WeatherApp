@@ -21,13 +21,16 @@
 		36255E7727BC0B5200B22F00 /* WeatherUrlProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E7627BC0B5200B22F00 /* WeatherUrlProviderProtocol.swift */; };
 		36255E7927BC0B9C00B22F00 /* WeatherURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E7827BC0B9C00B22F00 /* WeatherURLProvider.swift */; };
 		36255E7C27BC0C2F00B22F00 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E7B27BC0C2F00B22F00 /* WeatherResponse.swift */; };
-		36255E8027BCE14E00B22F00 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E7F27BCE14E00B22F00 /* ImageDownloader.swift */; };
 		36255E8327BD1F3200B22F00 /* WeatherUrlProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E8227BD1F3200B22F00 /* WeatherUrlProviderMock.swift */; };
 		36255E8627BD23E800B22F00 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E8527BD23E800B22F00 /* URLSessionProtocol.swift */; };
 		36255E8827BD242B00B22F00 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E8727BD242B00B22F00 /* URLSessionDataTaskProtocol.swift */; };
 		36255E8A27BD248000B22F00 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E8927BD248000B22F00 /* URLSessionDataTaskMock.swift */; };
 		36255E8C27BD261700B22F00 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E8B27BD261700B22F00 /* URLSessionMock.swift */; };
 		36255E9027BD856C00B22F00 /* GiphyURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E8F27BD856C00B22F00 /* GiphyURLProvider.swift */; };
+		36255E9327BD88BB00B22F00 /* GiphyURLProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E9227BD88BB00B22F00 /* GiphyURLProviderProtocol.swift */; };
+		36255E9527BE69B600B22F00 /* GiphyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E9427BE69B600B22F00 /* GiphyResponse.swift */; };
+		36255E9727BE6B1400B22F00 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E9627BE6B1400B22F00 /* String+.swift */; };
+		36255E9A27BE6CC000B22F00 /* GiphyNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E9927BE6CC000B22F00 /* GiphyNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,13 +61,16 @@
 		36255E7627BC0B5200B22F00 /* WeatherUrlProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUrlProviderProtocol.swift; sourceTree = "<group>"; };
 		36255E7827BC0B9C00B22F00 /* WeatherURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherURLProvider.swift; sourceTree = "<group>"; };
 		36255E7B27BC0C2F00B22F00 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
-		36255E7F27BCE14E00B22F00 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		36255E8227BD1F3200B22F00 /* WeatherUrlProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUrlProviderMock.swift; sourceTree = "<group>"; };
 		36255E8527BD23E800B22F00 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		36255E8727BD242B00B22F00 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		36255E8927BD248000B22F00 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 		36255E8B27BD261700B22F00 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		36255E8F27BD856C00B22F00 /* GiphyURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyURLProvider.swift; sourceTree = "<group>"; };
+		36255E9227BD88BB00B22F00 /* GiphyURLProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyURLProviderProtocol.swift; sourceTree = "<group>"; };
+		36255E9427BE69B600B22F00 /* GiphyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyResponse.swift; sourceTree = "<group>"; };
+		36255E9627BE6B1400B22F00 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		36255E9927BE6CC000B22F00 /* GiphyNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,10 +165,8 @@
 		36255E6427BBF67500B22F00 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				36255E9B27BE8B8F00B22F00 /* Network */,
 				36255E6527BBF68A00B22F00 /* WeatherDelegate.swift */,
-				36255E7627BC0B5200B22F00 /* WeatherUrlProviderProtocol.swift */,
-				36255E8527BD23E800B22F00 /* URLSessionProtocol.swift */,
-				36255E8727BD242B00B22F00 /* URLSessionDataTaskProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -170,6 +174,7 @@
 		36255E6B27BBFC2900B22F00 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				36255E9627BE6B1400B22F00 /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,9 +190,8 @@
 		36255E6F27BC0A3700B22F00 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				36255E9827BE6C9D00B22F00 /* API Requests */,
 				36255E8E27BD853F00B22F00 /* URLs */,
-				36255E7F27BCE14E00B22F00 /* ImageDownloader.swift */,
-				36255E7027BC0A6400B22F00 /* WeatherNetworkManager.swift */,
 				36255E7227BC0A9200B22F00 /* NetworkManager.swift */,
 			);
 			path = Network;
@@ -197,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				36255E7B27BC0C2F00B22F00 /* WeatherResponse.swift */,
+				36255E9427BE69B600B22F00 /* GiphyResponse.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -225,6 +230,34 @@
 				36255E8F27BD856C00B22F00 /* GiphyURLProvider.swift */,
 			);
 			path = URLs;
+			sourceTree = "<group>";
+		};
+		36255E9127BD889A00B22F00 /* URLs */ = {
+			isa = PBXGroup;
+			children = (
+				36255E7627BC0B5200B22F00 /* WeatherUrlProviderProtocol.swift */,
+				36255E9227BD88BB00B22F00 /* GiphyURLProviderProtocol.swift */,
+			);
+			path = URLs;
+			sourceTree = "<group>";
+		};
+		36255E9827BE6C9D00B22F00 /* API Requests */ = {
+			isa = PBXGroup;
+			children = (
+				36255E7027BC0A6400B22F00 /* WeatherNetworkManager.swift */,
+				36255E9927BE6CC000B22F00 /* GiphyNetworkManager.swift */,
+			);
+			path = "API Requests";
+			sourceTree = "<group>";
+		};
+		36255E9B27BE8B8F00B22F00 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				36255E8727BD242B00B22F00 /* URLSessionDataTaskProtocol.swift */,
+				36255E8527BD23E800B22F00 /* URLSessionProtocol.swift */,
+				36255E9127BD889A00B22F00 /* URLs */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,16 +361,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36255E8027BCE14E00B22F00 /* ImageDownloader.swift in Sources */,
 				36255E3427BBEC5400B22F00 /* WeatherVC.swift in Sources */,
 				36255E6E27BC07C900B22F00 /* NetworkError.swift in Sources */,
 				36255E6627BBF68A00B22F00 /* WeatherDelegate.swift in Sources */,
 				36255E8827BD242B00B22F00 /* URLSessionDataTaskProtocol.swift in Sources */,
 				36255E7927BC0B9C00B22F00 /* WeatherURLProvider.swift in Sources */,
 				36255E7727BC0B5200B22F00 /* WeatherUrlProviderProtocol.swift in Sources */,
+				36255E9A27BE6CC000B22F00 /* GiphyNetworkManager.swift in Sources */,
 				36255E3027BBEC5400B22F00 /* AppDelegate.swift in Sources */,
+				36255E9527BE69B600B22F00 /* GiphyResponse.swift in Sources */,
 				36255E7C27BC0C2F00B22F00 /* WeatherResponse.swift in Sources */,
+				36255E9727BE6B1400B22F00 /* String+.swift in Sources */,
 				36255E8627BD23E800B22F00 /* URLSessionProtocol.swift in Sources */,
+				36255E9327BD88BB00B22F00 /* GiphyURLProviderProtocol.swift in Sources */,
 				36255E7327BC0A9200B22F00 /* NetworkManager.swift in Sources */,
 				36255E3227BBEC5400B22F00 /* SceneDelegate.swift in Sources */,
 				36255E9027BD856C00B22F00 /* GiphyURLProvider.swift in Sources */,

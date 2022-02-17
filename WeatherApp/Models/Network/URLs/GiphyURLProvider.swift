@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GiphyURLProvider {
+class GiphyURLProvider: GiphyURLProviderProtocol {
     
     // MARK: - Internal methods
     func buildGiphyURL(keyword: String) -> URL? {

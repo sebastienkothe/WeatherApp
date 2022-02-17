@@ -15,6 +15,7 @@ class WeatherVC: UIViewController {
     @IBOutlet weak var cityNameLbl: UILabel!
     @IBOutlet weak var weatherInfoStackView: UIStackView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var gifIV: UIImageView!
     
     // MARK: - IBActions
     @IBAction func updatePositionBtnTapped() {
@@ -38,8 +39,8 @@ class WeatherVC: UIViewController {
     
     // MARK: - Private properties
     private let geolocationProvider = GeolocationProvider()
-    private let imageDownloader = ImageDownloader()
     private let weatherNetworkManager = WeatherNetworkManager()
+    private let giphyNetworkManager = GiphyNetworkManager()
     
     private var fetchedWeatherData: WeatherResponse? {
         didSet {
@@ -62,19 +63,6 @@ class WeatherVC: UIViewController {
         activityIndicator.isHidden = !shown
         stackView.isHidden = shown
     }
-    
-    private func getIconFrom(_ iconName: String) {
-        self.imageDownloader.fetchImage(from: iconName, with: { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let image):
-                    self.weatherTrendIV.image = image
-                case .failure(let error):
-                    self.handleError(error)
-                }
-            }
-        })
-    }
 }
 
 extension WeatherVC: WeatherDelegate {
@@ -87,15 +75,9 @@ extension WeatherVC: WeatherDelegate {
                 
                 switch result {
                 case .success(let weatherResponse):
-                    guard let icon = weatherResponse.weather.first?.icon else { return }
-                    self.cityNameLbl.text = weatherResponse.name == "" ? "📍" : weatherResponse.name
-                    self.tempLbl.text = "\(Int(weatherResponse.main.temp)) °C"
-                    self.getIconFrom(icon)
-                    
-                    for weather in weatherResponse.weather {
-                        print(weather)
-                    }
-                    
+                    self.fetchedWeatherData = weatherResponse
+                    self.cityNameLbl.text = weatherResponse.name == "" ? .unknownPlace : weatherResponse.name
+                    self.tempLbl.text = "\(Int(weatherResponse.main.temp))" + " " + .celsiusDegreeSymbol
                 case .failure(let error):
                     self.handleError(error)
                 }
