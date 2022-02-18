@@ -5,6 +5,8 @@
 //  Created by Sébastien Kothé on 17/02/2022.
 //
 
+import FLAnimatedImage
+
 final class GiphyNetworkManager {
     
     // MARK: - Initializer
@@ -21,7 +23,7 @@ final class GiphyNetworkManager {
     // MARK: - Internal methods
     
     /// Used to get weather information based on the user's current location
-    func fetchGIF(from keyword: String, completion: @escaping (Result<GiphyResponse, NetworkError>) -> Void) {
+    func fetchJSONDataFromGiphyAPI(from keyword: String, completion: @escaping (Result<GiphyResponse, NetworkError>) -> Void) {
         
         guard let url = giphyURLProvider.buildGiphyURL(keyword: keyword) else {
             completion(.failure(.failedToCreateURL))
@@ -29,6 +31,17 @@ final class GiphyNetworkManager {
         }
         
         networkManager.fetch(url: url, completion: completion)
+    }
+    
+    func getGifFrom(_ gifURLAsString: String, completion: @escaping ((FLAnimatedImage?) -> Void)) {
+        guard let imageURL = URL(string: gifURLAsString),
+              let imageData: Data = try? Data(contentsOf: imageURL),
+              let image = FLAnimatedImage(animatedGIFData: imageData) else {
+                  completion(nil)
+                  return
+              }
+        
+        completion(image)
     }
     
     // MARK: - Private properties

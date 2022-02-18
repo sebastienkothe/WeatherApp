@@ -29,8 +29,15 @@
 		36255E9027BD856C00B22F00 /* GiphyURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E8F27BD856C00B22F00 /* GiphyURLProvider.swift */; };
 		36255E9327BD88BB00B22F00 /* GiphyURLProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E9227BD88BB00B22F00 /* GiphyURLProviderProtocol.swift */; };
 		36255E9527BE69B600B22F00 /* GiphyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E9427BE69B600B22F00 /* GiphyResponse.swift */; };
-		36255E9727BE6B1400B22F00 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E9627BE6B1400B22F00 /* String+.swift */; };
+		36255E9727BE6B1400B22F00 /* String+StaticWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E9627BE6B1400B22F00 /* String+StaticWords.swift */; };
 		36255E9A27BE6CC000B22F00 /* GiphyNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E9927BE6CC000B22F00 /* GiphyNetworkManager.swift */; };
+		36255E9E27BEAC8A00B22F00 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 36255E9D27BEAC8A00B22F00 /* FLAnimatedImage */; };
+		36255EA427BFCD1500B22F00 /* WeatherDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255EA327BFCD1500B22F00 /* WeatherDescription.swift */; };
+		36255EA627BFDA0C00B22F00 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255EA527BFDA0C00B22F00 /* NetworkManagerTests.swift */; };
+		36255EA927BFDAFE00B22F00 /* CorrectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 36255EA827BFDAFE00B22F00 /* CorrectData.json */; };
+		36255EAB27BFDB7800B22F00 /* IncorrectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 36255EAA27BFDB7800B22F00 /* IncorrectData.json */; };
+		36255EAF27BFDCDF00B22F00 /* GiphyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 36255EAE27BFDCDF00B22F00 /* GiphyResponse.json */; };
+		36255EB327BFDD4300B22F00 /* WeatherResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 36255EB227BFDD4300B22F00 /* WeatherResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +76,14 @@
 		36255E8F27BD856C00B22F00 /* GiphyURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyURLProvider.swift; sourceTree = "<group>"; };
 		36255E9227BD88BB00B22F00 /* GiphyURLProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyURLProviderProtocol.swift; sourceTree = "<group>"; };
 		36255E9427BE69B600B22F00 /* GiphyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyResponse.swift; sourceTree = "<group>"; };
-		36255E9627BE6B1400B22F00 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		36255E9627BE6B1400B22F00 /* String+StaticWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StaticWords.swift"; sourceTree = "<group>"; };
 		36255E9927BE6CC000B22F00 /* GiphyNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyNetworkManager.swift; sourceTree = "<group>"; };
+		36255EA327BFCD1500B22F00 /* WeatherDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDescription.swift; sourceTree = "<group>"; };
+		36255EA527BFDA0C00B22F00 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		36255EA827BFDAFE00B22F00 /* CorrectData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CorrectData.json; sourceTree = "<group>"; };
+		36255EAA27BFDB7800B22F00 /* IncorrectData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IncorrectData.json; sourceTree = "<group>"; };
+		36255EAE27BFDCDF00B22F00 /* GiphyResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GiphyResponse.json; sourceTree = "<group>"; };
+		36255EB227BFDD4300B22F00 /* WeatherResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WeatherResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36255E9E27BEAC8A00B22F00 /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +128,6 @@
 			children = (
 				36255E6B27BBFC2900B22F00 /* Extensions */,
 				36255E6127BBEC6E00B22F00 /* Models */,
-				36255E6027BBEC6800B22F00 /* Views */,
 				36255E5F27BBEC6000B22F00 /* Controllers */,
 				36255E2F27BBEC5400B22F00 /* AppDelegate.swift */,
 				36255E3127BBEC5400B22F00 /* SceneDelegate.swift */,
@@ -129,6 +142,7 @@
 		36255E4527BBEC5500B22F00 /* WeatherAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				36255EA727BFDA9200B22F00 /* JSONData */,
 				36255E8D27BD274700B22F00 /* Tests */,
 				36255E8127BD1F2300B22F00 /* Mocks */,
 			);
@@ -143,20 +157,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		36255E6027BBEC6800B22F00 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		36255E6127BBEC6E00B22F00 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				36255E6227BBF65000B22F00 /* GeolocationProvider.swift */,
 				36255E7A27BC0C1600B22F00 /* DataModels */,
 				36255E6F27BC0A3700B22F00 /* Network */,
 				36255E6C27BC07BB00B22F00 /* Enum */,
-				36255E6227BBF65000B22F00 /* GeolocationProvider.swift */,
 				36255E6427BBF67500B22F00 /* Protocols */,
 			);
 			path = Models;
@@ -165,8 +172,8 @@
 		36255E6427BBF67500B22F00 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				36255E9B27BE8B8F00B22F00 /* Network */,
 				36255E6527BBF68A00B22F00 /* WeatherDelegate.swift */,
+				36255E9B27BE8B8F00B22F00 /* Network */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -174,7 +181,7 @@
 		36255E6B27BBFC2900B22F00 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				36255E9627BE6B1400B22F00 /* String+.swift */,
+				36255E9627BE6B1400B22F00 /* String+StaticWords.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -183,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				36255E6D27BC07C900B22F00 /* NetworkError.swift */,
+				36255EA327BFCD1500B22F00 /* WeatherDescription.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -190,9 +198,9 @@
 		36255E6F27BC0A3700B22F00 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				36255E7227BC0A9200B22F00 /* NetworkManager.swift */,
 				36255E9827BE6C9D00B22F00 /* API Requests */,
 				36255E8E27BD853F00B22F00 /* URLs */,
-				36255E7227BC0A9200B22F00 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -219,6 +227,7 @@
 		36255E8D27BD274700B22F00 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				36255EA527BFDA0C00B22F00 /* NetworkManagerTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -260,6 +269,17 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		36255EA727BFDA9200B22F00 /* JSONData */ = {
+			isa = PBXGroup;
+			children = (
+				36255EA827BFDAFE00B22F00 /* CorrectData.json */,
+				36255EAA27BFDB7800B22F00 /* IncorrectData.json */,
+				36255EAE27BFDCDF00B22F00 /* GiphyResponse.json */,
+				36255EB227BFDD4300B22F00 /* WeatherResponse.json */,
+			);
+			path = JSONData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +296,9 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				36255E9D27BEAC8A00B22F00 /* FLAnimatedImage */,
+			);
 			productName = WeatherApp;
 			productReference = 36255E2C27BBEC5400B22F00 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -326,6 +349,9 @@
 				Base,
 			);
 			mainGroup = 36255E2327BBEC5300B22F00;
+			packageReferences = (
+				36255E9C27BEAC8A00B22F00 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
+			);
 			productRefGroup = 36255E2D27BBEC5400B22F00 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -351,6 +377,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36255EAF27BFDCDF00B22F00 /* GiphyResponse.json in Resources */,
+				36255EA927BFDAFE00B22F00 /* CorrectData.json in Resources */,
+				36255EAB27BFDB7800B22F00 /* IncorrectData.json in Resources */,
+				36255EB327BFDD4300B22F00 /* WeatherResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,13 +395,14 @@
 				36255E6E27BC07C900B22F00 /* NetworkError.swift in Sources */,
 				36255E6627BBF68A00B22F00 /* WeatherDelegate.swift in Sources */,
 				36255E8827BD242B00B22F00 /* URLSessionDataTaskProtocol.swift in Sources */,
+				36255EA427BFCD1500B22F00 /* WeatherDescription.swift in Sources */,
 				36255E7927BC0B9C00B22F00 /* WeatherURLProvider.swift in Sources */,
 				36255E7727BC0B5200B22F00 /* WeatherUrlProviderProtocol.swift in Sources */,
 				36255E9A27BE6CC000B22F00 /* GiphyNetworkManager.swift in Sources */,
 				36255E3027BBEC5400B22F00 /* AppDelegate.swift in Sources */,
 				36255E9527BE69B600B22F00 /* GiphyResponse.swift in Sources */,
 				36255E7C27BC0C2F00B22F00 /* WeatherResponse.swift in Sources */,
-				36255E9727BE6B1400B22F00 /* String+.swift in Sources */,
+				36255E9727BE6B1400B22F00 /* String+StaticWords.swift in Sources */,
 				36255E8627BD23E800B22F00 /* URLSessionProtocol.swift in Sources */,
 				36255E9327BD88BB00B22F00 /* GiphyURLProviderProtocol.swift in Sources */,
 				36255E7327BC0A9200B22F00 /* NetworkManager.swift in Sources */,
@@ -386,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36255EA627BFDA0C00B22F00 /* NetworkManagerTests.swift in Sources */,
 				36255E8C27BD261700B22F00 /* URLSessionMock.swift in Sources */,
 				36255E8A27BD248000B22F00 /* URLSessionDataTaskMock.swift in Sources */,
 				36255E8327BD1F3200B22F00 /* WeatherUrlProviderMock.swift in Sources */,
@@ -553,9 +585,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = light;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -565,7 +598,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -584,9 +617,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = light;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,7 +630,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -671,6 +705,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		36255E9C27BEAC8A00B22F00 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		36255E9D27BEAC8A00B22F00 /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36255E9C27BEAC8A00B22F00 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 36255E2427BBEC5300B22F00 /* Project object */;
 }

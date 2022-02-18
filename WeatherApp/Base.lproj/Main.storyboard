@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,48 +17,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="xM7-gG-Xus">
-                                <rect key="frame" x="178.5" y="138" width="57" height="107.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j2z-4r-p58" customClass="FLAnimatedImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xM7-gG-Xus">
+                                <rect key="frame" x="207" y="138" width="0.0" height="0.0"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCp-0L-XjV">
-                                        <rect key="frame" x="0.0" y="0.0" width="57" height="50.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCp-0L-XjV">
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="-1" height="-1"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfg-7z-4YO">
-                                        <rect key="frame" x="3.5" y="57.5" width="50" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfg-7z-4YO">
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="-1" height="-1"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3Bj-M1-ANr">
-                                <rect key="frame" x="181" y="173.5" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="119.5" width="37" height="37"/>
                             </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j2z-4r-p58">
-                                <rect key="frame" x="10" y="265.5" width="394" height="394"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="j2z-4r-p58" secondAttribute="height" id="xCO-Rd-Gz0"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xM7-gG-Xus" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="3zk-mm-pdS"/>
-                            <constraint firstItem="j2z-4r-p58" firstAttribute="top" secondItem="xM7-gG-Xus" secondAttribute="bottom" constant="20" id="DkV-Qv-itL"/>
+                            <constraint firstAttribute="bottom" secondItem="j2z-4r-p58" secondAttribute="bottom" id="HfO-Wl-Gli"/>
                             <constraint firstItem="xM7-gG-Xus" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IB9-Bt-tc5"/>
-                            <constraint firstItem="j2z-4r-p58" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="IMc-wn-iOS"/>
-                            <constraint firstItem="xM7-gG-Xus" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.12" id="Yxl-gZ-C95"/>
-                            <constraint firstItem="3Bj-M1-ANr" firstAttribute="centerX" secondItem="xM7-gG-Xus" secondAttribute="centerX" constant="-7.5" id="fqB-3h-mHg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j2z-4r-p58" secondAttribute="trailing" constant="10" id="imm-LE-LyC"/>
+                            <constraint firstItem="j2z-4r-p58" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IMc-wn-iOS"/>
+                            <constraint firstItem="3Bj-M1-ANr" firstAttribute="centerX" secondItem="xM7-gG-Xus" secondAttribute="centerX" id="fqB-3h-mHg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j2z-4r-p58" secondAttribute="trailing" id="imm-LE-LyC"/>
                             <constraint firstItem="3Bj-M1-ANr" firstAttribute="centerY" secondItem="xM7-gG-Xus" secondAttribute="centerY" id="mYG-14-EOc"/>
+                            <constraint firstItem="j2z-4r-p58" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rO4-gM-cGZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d3U-h9-Rcp">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.clockwise" catalog="system" id="dDw-Xb-x1y">
+                        <barButtonItem key="rightBarButtonItem" title="Update location" id="dDw-Xb-x1y">
+                            <imageReference key="image" image="location.magnifyingglass" catalog="system" symbolScale="large"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="updatePositionBtnTapped" destination="BYZ-38-t0r" id="K24-A2-oNe"/>
@@ -96,7 +97,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="location.magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

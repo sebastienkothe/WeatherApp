@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": 2.9457,
+        "lat": 42.6993
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 290.48,
+        "feels_like": 290.17,
+        "temp_min": 286.94,
+        "temp_max": 297.85,
+        "pressure": 1015,
+        "humidity": 73
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 4.12,
+        "deg": 60
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1645192593,
+    "sys": {
+        "type": 2,
+        "id": 2002809,
+        "country": "FR",
+        "sunrise": 1645166489,
+        "sunset": 1645204987
+    },
+    "timezone": 3600,
+    "id": 3029302,
+    "name": "Cabestany",
+    "cod": 200
+}

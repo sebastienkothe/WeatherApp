@@ -18,19 +18,17 @@ final class GeolocationProvider: NSObject, CLLocationManagerDelegate {
     func getUserLocation() {
         locationManager = CLLocationManager()
         
-        // Instance configuration
         locationManager?.delegate = self
         locationManager?.requestAlwaysAuthorization()
         locationManager?.allowsBackgroundLocationUpdates = false
         
-        // Start of location update
         locationManager?.startUpdatingLocation()
     }
     
     /// Used to handle the user's current position
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        // Used to stop listening for location updates
+        // Used to prevent heavy battery usage
         locationManager?.stopUpdatingLocation()
         
         if let location = locations.last {

@@ -15,6 +15,8 @@ enum NetworkError: Error, CaseIterable {
     case incorrectHttpResponseCode
     case locationServiceDisabled
     case errorWhileRetrievingImage
+    case unableToCreateImageFromData
+    case unableToCreateDataFromURL
     
     var title: String {
         switch self {
@@ -25,6 +27,8 @@ enum NetworkError: Error, CaseIterable {
         case .incorrectHttpResponseCode: return "Incorrect HTTP response code"
         case .locationServiceDisabled: return "The location service is disabled"
         case .errorWhileRetrievingImage: return "Error while retrieving image"
+        case .unableToCreateImageFromData: return "Unable to create image from data"
+        case .unableToCreateDataFromURL: return "Unable to create data from URL"
         }
     }
 }

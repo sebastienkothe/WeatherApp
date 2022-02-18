@@ -10,57 +10,11 @@ import Foundation
 // MARK: - GiphyResponse
 struct GiphyResponse: Codable {
     let data: [Datum]
-    let pagination: Pagination
-    let meta: Meta
 }
 
 // MARK: - Datum
 struct Datum: Codable {
-    let type: TypeEnum
-    let id: String
-    let url: String
-    let slug: String
-    let bitlyGIFURL, bitlyURL: String
-    let embedURL: String
-    let username: String
-    let source: String
-    let title: String
-    let rating: Rating
-    let contentURL, sourceTLD: String
-    let sourcePostURL: String
-    let isSticker: Int
-    let importDatetime, trendingDatetime: String
     let images: Images
-    let analyticsResponsePayload: String
-    let analytics: Analytics
-    let user: User?
-    
-    enum CodingKeys: String, CodingKey {
-        case type, id, url, slug
-        case bitlyGIFURL = "bitly_gif_url"
-        case bitlyURL = "bitly_url"
-        case embedURL = "embed_url"
-        case username, source, title, rating
-        case contentURL = "content_url"
-        case sourceTLD = "source_tld"
-        case sourcePostURL = "source_post_url"
-        case isSticker = "is_sticker"
-        case importDatetime = "import_datetime"
-        case trendingDatetime = "trending_datetime"
-        case images
-        case analyticsResponsePayload = "analytics_response_payload"
-        case analytics, user
-    }
-}
-
-// MARK: - Analytics
-struct Analytics: Codable {
-    let onload, onclick, onsent: Onclick
-}
-
-// MARK: - Onclick
-struct Onclick: Codable {
-    let url: String
 }
 
 // MARK: - Images
@@ -151,59 +105,5 @@ struct Looping: Codable {
     enum CodingKeys: String, CodingKey {
         case mp4Size = "mp4_size"
         case mp4
-    }
-}
-
-enum Rating: String, Codable {
-    case g = "g"
-    case pg = "pg"
-}
-
-enum TypeEnum: String, Codable {
-    case gif = "gif"
-}
-
-// MARK: - User
-struct User: Codable {
-    let avatarURL: String
-    let bannerImage, bannerURL: String
-    let profileURL: String
-    let username, displayName, userDescription: String
-    let instagramURL: String
-    let websiteURL: String
-    let isVerified: Bool
-    
-    enum CodingKeys: String, CodingKey {
-        case avatarURL = "avatar_url"
-        case bannerImage = "banner_image"
-        case bannerURL = "banner_url"
-        case profileURL = "profile_url"
-        case username
-        case displayName = "display_name"
-        case userDescription = "description"
-        case instagramURL = "instagram_url"
-        case websiteURL = "website_url"
-        case isVerified = "is_verified"
-    }
-}
-
-// MARK: - Meta
-struct Meta: Codable {
-    let status: Int
-    let msg, responseID: String
-    
-    enum CodingKeys: String, CodingKey {
-        case status, msg
-        case responseID = "response_id"
-    }
-}
-
-// MARK: - Pagination
-struct Pagination: Codable {
-    let totalCount, count, offset: Int
-    
-    enum CodingKeys: String, CodingKey {
-        case totalCount = "total_count"
-        case count, offset
     }
 }

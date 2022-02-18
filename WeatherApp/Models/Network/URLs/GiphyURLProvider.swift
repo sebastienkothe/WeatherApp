@@ -17,7 +17,8 @@ class GiphyURLProvider: GiphyURLProviderProtocol {
         urlComponents.path = "/v1/gifs/search"
         urlComponents.queryItems = [
             URLQueryItem(name: "api_key", value: "69oigQHHKkAXzjsXIHaWeTwbGoaYdRmN"),
-            URLQueryItem(name: "q", value: keyword)
+            URLQueryItem(name: "q", value: keyword),
+            URLQueryItem(name: "limit", value: "1")
         ]
         return urlComponents.url
     }
