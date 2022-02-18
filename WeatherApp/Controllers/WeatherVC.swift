@@ -7,7 +7,6 @@
 
 import UIKit
 import CoreLocation
-import FLAnimatedImage
 
 class WeatherVC: UIViewController {
     
@@ -16,7 +15,6 @@ class WeatherVC: UIViewController {
     @IBOutlet weak var cityNameLbl: UILabel!
     @IBOutlet weak var weatherInfoStackView: UIStackView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var gifIV: FLAnimatedImageView!
     
     // MARK: - IBActions
     @IBAction func updatePositionBtnTapped() {
@@ -41,7 +39,6 @@ class WeatherVC: UIViewController {
     // MARK: - Private properties
     private let geolocationProvider = GeolocationProvider()
     private let weatherNetworkManager = WeatherNetworkManager()
-    private let giphyNetworkManager = GiphyNetworkManager()
     
     // MARK: - Private methods
     
@@ -58,33 +55,6 @@ class WeatherVC: UIViewController {
         activityIndicator.isHidden = !shown
         view.isHidden = shown
     }
-    
-    private func runTheGiphyAPIRequest(weatherResponse: WeatherResponse) {
-        guard let weatherDescription = weatherResponse.weather.first?.description, let shortWeatherDescription = WeatherDescription.allCases.filter({ $0.rawValue == weatherDescription }).first?.truncatedDescription else { return }
-        
-        self.giphyNetworkManager.fetchJSONDataFromGiphyAPI(from: shortWeatherDescription) { [weak self] result in
-            switch result {
-            case .success(let giphyResponse):
-                guard let gifURLAsString = giphyResponse.data.first?.images.downsized.url else { return }
-                self?.fetchGifFrom(gifURLAsString)
-            case.failure(let networkError):
-                self?.handleError(networkError)
-            }
-        }
-    }
-    
-    private func fetchGifFrom(_ gifURLAsString: String) {
-        giphyNetworkManager.getGifFrom(gifURLAsString) { [weak self] gif in
-            guard let gif = gif else {
-                self?.handleError(.unableToCreateImageFromData)
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self?.gifIV.animatedImage = gif
-            }
-        }
-    }
 }
 
 extension WeatherVC: WeatherDelegate {
@@ -97,7 +67,6 @@ extension WeatherVC: WeatherDelegate {
                 
                 switch result {
                 case .success(let weatherResponse):
-                    self.runTheGiphyAPIRequest(weatherResponse: weatherResponse)
                     self.cityNameLbl.text = weatherResponse.name.count == 0 ? .unknownPlace : weatherResponse.name
                     self.tempLbl.text = "\(Int(weatherResponse.main.temp))" + .whiteSpace + .celsiusDegreeSymbol
                 case .failure(let error):
