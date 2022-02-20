@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YNB-nP-QYl">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WeatherVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perpignan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCp-0L-XjV">
-                                <rect key="frame" x="10" y="513" width="300" height="40"/>
+                                <rect key="frame" x="10" y="265" width="548" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="wgW-hX-xxR"/>
                                 </constraints>
@@ -28,14 +28,14 @@
                                 <size key="shadowOffset" width="-1" height="-1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear sky" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCg-r0-YGF">
-                                <rect key="frame" x="20" y="44" width="166" height="43"/>
+                                <rect key="frame" x="20" y="32" width="166" height="43"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°C" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfg-7z-4YO">
-                                <rect key="frame" x="95" y="135.5" width="205" height="101.5"/>
+                                <rect key="frame" x="371.5" y="32" width="176.5" height="87.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="85"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
                                 </variation>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="01d" translatesAutoresizingMaskIntoConstraints="NO" id="nWT-qa-Yqs">
-                                <rect key="frame" x="48" y="-248" width="224" height="1200"/>
+                                <rect key="frame" x="-316" y="97" width="1200" height="158"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -74,42 +74,42 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="5fK-E5-QL4"/>
-                                <exclude reference="QvZ-e0-9ht"/>
-                                <exclude reference="V5F-1B-WaJ"/>
-                                <exclude reference="Wzv-ma-4uB"/>
-                                <exclude reference="h4I-fn-fHI"/>
-                                <exclude reference="rN7-5O-pT0"/>
                                 <exclude reference="Ixb-Fe-Xr2"/>
                                 <exclude reference="LYM-NE-1vE"/>
                                 <exclude reference="WZb-It-hsJ"/>
                                 <exclude reference="fts-ri-KDn"/>
                                 <exclude reference="jW2-Bi-3fp"/>
                                 <exclude reference="kxF-Tw-x1f"/>
+                                <exclude reference="5fK-E5-QL4"/>
+                                <exclude reference="QvZ-e0-9ht"/>
+                                <exclude reference="V5F-1B-WaJ"/>
+                                <exclude reference="Wzv-ma-4uB"/>
+                                <exclude reference="h4I-fn-fHI"/>
+                                <exclude reference="rN7-5O-pT0"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="QvZ-e0-9ht"/>
-                                <include reference="rN7-5O-pT0"/>
                                 <include reference="WZb-It-hsJ"/>
                                 <include reference="jW2-Bi-3fp"/>
+                                <include reference="QvZ-e0-9ht"/>
+                                <include reference="rN7-5O-pT0"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
-                                <include reference="5fK-E5-QL4"/>
-                                <include reference="Wzv-ma-4uB"/>
                                 <include reference="Ixb-Fe-Xr2"/>
                                 <include reference="kxF-Tw-x1f"/>
+                                <include reference="5fK-E5-QL4"/>
+                                <include reference="Wzv-ma-4uB"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="V5F-1B-WaJ"/>
-                                <include reference="h4I-fn-fHI"/>
                                 <include reference="LYM-NE-1vE"/>
                                 <include reference="fts-ri-KDn"/>
+                                <include reference="V5F-1B-WaJ"/>
+                                <include reference="h4I-fn-fHI"/>
                             </mask>
                         </variation>
                     </view>
@@ -139,7 +139,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YNB-nP-QYl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eLz-OR-nTe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
