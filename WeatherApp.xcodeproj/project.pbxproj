@@ -27,7 +27,6 @@
 		36255E8A27BD248000B22F00 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E8927BD248000B22F00 /* URLSessionDataTaskMock.swift */; };
 		36255E8C27BD261700B22F00 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E8B27BD261700B22F00 /* URLSessionMock.swift */; };
 		36255E9727BE6B1400B22F00 /* String+StaticWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255E9627BE6B1400B22F00 /* String+StaticWords.swift */; };
-		36255E9E27BEAC8A00B22F00 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 36255E9D27BEAC8A00B22F00 /* FLAnimatedImage */; };
 		36255EA627BFDA0C00B22F00 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36255EA527BFDA0C00B22F00 /* NetworkManagerTests.swift */; };
 		36255EA927BFDAFE00B22F00 /* CorrectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 36255EA827BFDAFE00B22F00 /* CorrectData.json */; };
 		36255EAB27BFDB7800B22F00 /* IncorrectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 36255EAA27BFDB7800B22F00 /* IncorrectData.json */; };
@@ -85,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36255E9E27BEAC8A00B22F00 /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +286,6 @@
 			);
 			name = WeatherApp;
 			packageProductDependencies = (
-				36255E9D27BEAC8A00B22F00 /* FLAnimatedImage */,
 			);
 			productName = WeatherApp;
 			productReference = 36255E2C27BBEC5400B22F00 /* WeatherApp.app */;
@@ -341,7 +338,6 @@
 			);
 			mainGroup = 36255E2327BBEC5300B22F00;
 			packageReferences = (
-				36255E9C27BEAC8A00B22F00 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
 			);
 			productRefGroup = 36255E2D27BBEC5400B22F00 /* Products */;
 			projectDirPath = "";
@@ -573,7 +569,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -605,7 +601,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -693,25 +689,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		36255E9C27BEAC8A00B22F00 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		36255E9D27BEAC8A00B22F00 /* FLAnimatedImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 36255E9C27BEAC8A00B22F00 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
-			productName = FLAnimatedImage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 36255E2427BBEC5300B22F00 /* Project object */;
 }

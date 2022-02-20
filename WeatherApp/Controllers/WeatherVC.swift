@@ -13,8 +13,8 @@ class WeatherVC: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var tempLbl: UILabel!
     @IBOutlet weak var cityNameLbl: UILabel!
-    @IBOutlet weak var weatherInfoStackView: UIStackView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var weatherInfo: UILabel!
+    @IBOutlet weak var weatherDescriptionIV: UIImageView!
     
     // MARK: - IBActions
     @IBAction func updatePositionBtnTapped() {
@@ -49,12 +49,6 @@ class WeatherVC: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
-    
-    /// Used to hide items
-    private func toggleActivityIndicator<T: UIView>(shown: Bool, activityIndicator: UIActivityIndicatorView, view: T) {
-        activityIndicator.isHidden = !shown
-        view.isHidden = shown
-    }
 }
 
 extension WeatherVC: WeatherDelegate {
@@ -63,12 +57,17 @@ extension WeatherVC: WeatherDelegate {
             guard let self = self else { return }
             
             DispatchQueue.main.async {
-                self.toggleActivityIndicator(shown: false, activityIndicator: self.activityIndicator, view: self.weatherInfoStackView)
-                
                 switch result {
                 case .success(let weatherResponse):
+                    guard let weather = weatherResponse.weather.first else { return }
+                    self.view.backgroundColor = weather.icon.contains("d") ? #colorLiteral(red: 0.9490196078, green: 0.768627451, blue: 0.3450980392, alpha: 1) : #colorLiteral(red: 0.4196078431, green: 0.5450980392, blue: 0.7098039216, alpha: 1)
+                    var icon = weather.icon
+                    if !["01", "10", "02"].contains(where: { icon.contains($0) }) { icon.removeLast() }
+            
+                    self.weatherDescriptionIV.image = UIImage(named: icon)
+                    self.weatherInfo.text = weather.description.capitalizingFirstLetter()
                     self.cityNameLbl.text = weatherResponse.name.count == 0 ? .unknownPlace : weatherResponse.name
-                    self.tempLbl.text = "\(Int(weatherResponse.main.temp))" + .whiteSpace + .celsiusDegreeSymbol
+                    self.tempLbl.text = "\(Int(weatherResponse.main.feels_like))" + .degreeSymbol
                 case .failure(let error):
                     self.handleError(error)
                 }

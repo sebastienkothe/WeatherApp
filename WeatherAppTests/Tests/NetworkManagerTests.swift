@@ -42,10 +42,10 @@ class NetworkManagerTest: XCTestCase {
         mockSession = createMockSession(fromJsonFile: "CorrectData",
                                         andStatusCode: 200, andError: nil)
         subjectUnderTest = NetworkManager(withSession: mockSession)
-        subjectUnderTest.fetch(url: URL(string: "TestUrl")!, completion: {(result: Result<GiphyResponse, NetworkError>) in
+        subjectUnderTest.fetch(url: URL(string: "TestUrl")!, completion: {(result: Result<WeatherResponse, NetworkError>) in
             do {
-                let giphyResponse = try result.get()
-                XCTAssertNotNil(giphyResponse)
+                let weatherResponse = try result.get()
+                XCTAssertNotNil(weatherResponse)
             } catch {
                 XCTAssertNil(error)
             }
@@ -55,10 +55,10 @@ class NetworkManagerTest: XCTestCase {
     func testNetworkManager_404Result() {
         mockSession = createMockSession(fromJsonFile: "CorrectData", andStatusCode: 404, andError: nil)
         subjectUnderTest = NetworkManager(withSession: mockSession)
-        subjectUnderTest.fetch(url: URL(string: "TestUrl")!, completion: { (result: Result<GiphyResponse, NetworkError>) in
+        subjectUnderTest.fetch(url: URL(string: "TestUrl")!, completion: { (result: Result<WeatherResponse, NetworkError>) in
             do {
-                let giphyResponse = try result.get()
-                XCTAssertNil(giphyResponse)
+                let weatherResponse = try result.get()
+                XCTAssertNil(weatherResponse)
             } catch {
                 XCTAssertEqual(error as? NetworkError, .incorrectHttpResponseCode)
             }
@@ -68,10 +68,10 @@ class NetworkManagerTest: XCTestCase {
     func testNetworkManager_NoData() {
         mockSession = createMockSession(fromJsonFile: "fileNotFound", andStatusCode: 500, andError: nil)
         subjectUnderTest = NetworkManager(withSession: mockSession)
-        subjectUnderTest.fetch(url: URL(string: "TestUrl")!, completion: { (result: Result<GiphyResponse, NetworkError>) in
+        subjectUnderTest.fetch(url: URL(string: "TestUrl")!, completion: { (result: Result<WeatherResponse, NetworkError>) in
             do {
-                let giphyResponse = try result.get()
-                XCTAssertNil(giphyResponse)
+                let weatherResponse = try result.get()
+                XCTAssertNil(weatherResponse)
             } catch {
                 XCTAssertEqual(error as? NetworkError, .noData)
             }
@@ -81,10 +81,10 @@ class NetworkManagerTest: XCTestCase {
     func testNetworkManager_AnotherStatusCode() {
         mockSession = createMockSession(fromJsonFile: "CorrectData", andStatusCode: 401, andError: NetworkError.unknownError)
         subjectUnderTest = NetworkManager(withSession: mockSession)
-        subjectUnderTest.fetch(url: URL(string: "TestUrl")!, completion: { (result: Result<GiphyResponse, NetworkError>) in
+        subjectUnderTest.fetch(url: URL(string: "TestUrl")!, completion: { (result: Result<WeatherResponse, NetworkError>) in
             do {
-                let giphyResponse = try result.get()
-                XCTAssertNil(giphyResponse)
+                let weatherResponse = try result.get()
+                XCTAssertNil(weatherResponse)
             } catch {
                 XCTAssertEqual(error as? NetworkError, .unknownError)
             }
@@ -94,10 +94,10 @@ class NetworkManagerTest: XCTestCase {
     func testNetworkManager_InvalidData() {
         mockSession = createMockSession(fromJsonFile: "IncorrectData", andStatusCode: 200, andError: nil)
         subjectUnderTest = NetworkManager(withSession: mockSession)
-        subjectUnderTest.fetch(url: URL(string: "TestUrl")!, completion: { (result: Result<GiphyResponse, NetworkError>) in
+        subjectUnderTest.fetch(url: URL(string: "TestUrl")!, completion: { (result: Result<WeatherResponse, NetworkError>) in
             do {
-                let giphyResponse = try result.get()
-                XCTAssertNil(giphyResponse)
+                let weatherResponse = try result.get()
+                XCTAssertNil(weatherResponse)
             } catch {
                 XCTAssertEqual(error as? NetworkError, .failedToDecodeJSON)
             }
